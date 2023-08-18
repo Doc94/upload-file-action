@@ -1,0 +1,21 @@
+{
+  "name": "upload-file-action",
+  "version": "1.0.0",
+  "description": "Upload file via http request. This is a Js action. Use axios to send and send requests. There is no limit on file size.",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint .",
+    "prepare": "ncc build index.js -o dist --source-map --license licenses.txt",
+    "test": "jest",
+    "all": "npm run lint && npm run prepare && npm run test"
+  },
+  "author": "Doc",
+  "license": "MIT",
+  "dependencies": {
+    "@actions/core": "^1.10.0",
+    "@babel/code-frame": "^7.22.10",
+    "@babel/core": "^7.22.10",
+    "@babel/generator": "^7.22.10",
+    "ncc": "^0.3.6"
+  }
+}
