@@ -1,30 +1,28 @@
 # Upload File Action
 
- Upload file via http request. This is a Js action. Use axios to send and send requests. There is no limit on file size.
-
+Upload file via http request. This is a Js action. Use axios to send and send requests. There is no limit on file size.
 
 ## Usage
 
 This is an example of upload apk to pgyer.com(蒲公英网站)
+
 ```yaml
  - name: Upload File
    id: upload
-   uses: JantHsueh/upload-file-action@master
+   uses: Doc94/upload-file-action@v2
    with:
-    url: https://www.pgyer.com/apiv2/app/upload
-    forms: '{"_api_key":"${{ secrets.pgyer_key }}","buildInstallType":3}'
-    fileForms: '{"file":"app/build/outputs/apk/release/app-release.apk"}'
+     url: https://www.pgyer.com/apiv2/app/upload
+     forms: '{"_api_key":"${{ secrets.pgyer_key }}","buildInstallType":3}'
+     fileForms: '{"file":"app/build/outputs/apk/release/app-release.apk"}'
 ```
-
 
 ## Inputs
 
-| Parameter  | Required | Info                                                         |
-| ---------- | -------- | ------------------------------------------------------------ |
-| `url`      | `true`   | Web request URL endpoint                                     |
-| `forms`  | `false`  | Data to be transmitted,such as key, pwd, etc. Use json format |
-| `fileForms`  | `false`  | Files to be transferred,such as 'file','image' etc. Use json format |
-
+| Parameter   | Required | Info                                                                |
+|-------------|----------|---------------------------------------------------------------------|
+| `url`       | `true`   | Web request URL endpoint                                            |
+| `forms`     | `false`  | Data to be transmitted,such as key, pwd, etc. Use json format       |
+| `fileForms` | `false`  | Files to be transferred,such as 'file','image' etc. Use json format |
 
 ## Outputs
 
@@ -40,9 +38,9 @@ Output format: `JSON`
   }
 }
 ```
->There is no return time , because this is running on Amazon server,there are some time zone issues. use [get-time-action](https://github.com/JantHsueh/get-time-action) to get the time in your current time zone 
 
-
+> There is no return time , because this is running on Amazon server,there are some time zone issues.
+> use [get-time-action](https://github.com/JantHsueh/get-time-action) to get the time in your current time zone
 
 ### Example output usage
 
