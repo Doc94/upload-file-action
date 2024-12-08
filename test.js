@@ -1,4 +1,4 @@
-const uploadFile = require('./uploadFile');
+const uploadFile = require('./src/uploadFile');
 
 test('webrequest post', async () => {
 
