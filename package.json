@@ -1,13 +1,14 @@
 {
   "name": "upload-file-action",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Upload file via http request. This is a Js action. Use axios to send and send requests. There is no limit on file size.",
   "main": "src/index.js",
   "scripts": {
     "lint": "eslint .",
     "prepare": "ncc build src/index.js --license licenses.txt",
     "test": "jest",
-    "all": "npm run lint && npm run prepare && npm run test"
+    "all": "npm run lint && npm run prepare && npm run test",
+    "release": "commit-and-tag-version"
   },
   "author": "Doc",
   "license": "MIT",
