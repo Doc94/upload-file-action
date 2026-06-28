@@ -23,5 +23,5 @@ outputs:
   output:
     description: 'data output from the upload file'
 runs:
-  using: 'node16'
+  using: 'node24'
   main: 'dist/index.js'
